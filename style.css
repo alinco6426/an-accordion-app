@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Kumbh+Sans:wght@500&display=swap');
+body{
+    background: linear-gradient( to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    background-size:  100% ;
+    background-repeat: no-repeat;
+    font-family: 'Kumbh Sans';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+}
+.main-content{
+    background-color: hsl(0, 0%, 100%);
+    width: 80%;
+    margin:  120px ;
+    display: flex;
+    border-radius: 10px;
+    height: auto;
+    position: relative;
+    box-shadow: 0px 10px 120px 1px hsla(0, 100%, 0%, 0.4)
+}
+.mockup{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    padding: 30px 0;
+    background-image: url(bg-pattern-desktop.svg);
+    background-size: 210% 190%;
+    background-position: -600px -350PX;
+    background-repeat: no-repeat ;
+}
+.illustration-container{
+    width: 100%;
+}
+.illustration-container .desktop-image {
+    margin-top: 120px;
+    position: absolute;
+    left: -70px;
+} 
+.box {
+     position: absolute;
+     left: -80px;
+     z-index: 99;
+     margin-top: 290px;
+     width: 180px;
+     height: 180px;
+ }
+.accordion-content {
+     margin: 50px 0;
+     width: 50%;
+     padding: 30px;
+ }
+
+.accordion-section {
+     padding: 20px 0;
+     border-bottom: 2px solid hsl(240, 5%, 91%);
+     margin: 10px;
+     cursor: pointer;
+ }
+.toggle-div{
+    display: flex;
+    justify-content: space-between;
+}
+.toggle-div img{
+    width: 15px;
+    height: 10px;
+    margin: 10px;
+}
+.toggle-div h3{
+    font-size: small;
+    color: hsl(240, 6%, 50%);
+}
+.toggle-div h3:hover{
+    color:  hsl(14, 88%, 65%);
+}
+.hidden-div {
+    display: none;
+    margin: 20px 0;
+}
+
+.hidden-div p {
+    display: flex;
+    flex-wrap: wrap;
+    color: hsl(240, 6%, 50%);
+}
+h1 {
+    margin: 10px;
+    font-weight: 600;
+    font-size: 40px;
+}
+.transform{
+    transform: rotate(-180deg);
+}
+.display{
+    display: block;
+}
+ .toggle-div .scale{
+    font-size: large;
+    color:hsl(238, 29%, 16%);
+}
+.mobile-image{
+    display: none;
+}
+
+/* mobile design starts here  */
+
+@media screen  and (max-width:450px) {
+    .wrapper {
+            display: block;
+            justify-content: normal;
+            width: 100%;
+            align-items: normal;
+            height: 100%;
+            padding: 20px;
+        }
+    
+        .main-content {
+            width: 100%;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            position: relative;
+            margin: 200px 0 50px 0;
+        }
+    
+       .mockup {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background-image: url(bg-pattern-mobile.svg);
+            background-size: contain;
+            background-position: 5px 100px;
+            background-repeat: no-repeat;
+            padding:  0 40px;
+            top: -120px;
+            height: 280px;
+            margin: 0;
+        }
+        .illustration-container {
+            width: 100%;
+        }
+    
+         .illustration-container .desktop-image {
+            display: none;
+        }
+        .illustration-container .mobile-image{
+            display: block;
+            height: 250px;
+        }
+    
+        .box {
+            display: none;
+        }
+    
+        .accordion-content {
+            margin:  0;
+            width: 100%;
+            padding: 0 20px 40px 20px;
+        }
+        .accordion-section {
+            padding: 10px 0;
+            margin: 10px;
+            width: 100%;
+        }
+    
+        .toggle-div {
+            width: 100%;
+        }
+    
+        .toggle-div h3 {
+            font-size: 14px;
+        }
+        .hidden-div {
+            display: none;
+            margin: 20px 0;
+        }
+        .hidden-div p{
+            font-size: 14px;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px;
+        }
+
+    
+        .display {
+            display: block;
+        }
+    
+        .toggle-div .scale {
+            font-size: 18px;
+            color: hsl(238, 29%, 16%);
+        } 
+}
